@@ -176,7 +176,9 @@ blockquote::after {
 blockquote {
   quotes: "“" "”" "‘" "’";
   text-indent: -0.5em;
-  font-style: italic;
+  /*font-style: italic;*/
+  /*border-left: 3px solid var(--grey);*/
+  /*padding-left: 1.5rem;*/
 }
 
 
