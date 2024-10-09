@@ -571,8 +571,8 @@ main div{
   flex-direction: column;
   /*max-height: var(--case-study-image);*/
   /*min-width: calc(var(--case-study-image)*1.618);*/
-  inline-size: 100%;
-  aspect-ratio: 1.618 / 1;
+  /*inline-size: 100%;*/
+  /*aspect-ratio: 1.618 / 1;*/
   object-fit: cover;
   /*background-color: var(--grey);*/
   scroll-snap-align: start;
