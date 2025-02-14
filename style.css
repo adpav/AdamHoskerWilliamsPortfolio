@@ -435,7 +435,7 @@ header nav ul{
 }
 
 header nav ul li{
-  margin-right: 2rem;
+  margin-right: var(--medium);
   z-index: 1000
 }
 
