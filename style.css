@@ -255,8 +255,8 @@ blockquote {
 .margin-right-medium{margin-right:var(--medium);}
 .margin-right-large{margin-right:var(--large);}
 .margin-right-xlarge{margin-right:var(--xlarge);}
-.margin-right-2xlarge{margin-left:var(--2xlarge);}
-.margin-right-3xlarge{margin-left:var(--3xlarge);}
+.margin-right-2xlarge{margin-right:var(--2xlarge);}
+.margin-right-3xlarge{margin-right:var(--3xlarge);}
 
 .margin-top-xsmall{margin-top:var(--xsmall);}
 .margin-top-small{margin-top:var(--small);}
