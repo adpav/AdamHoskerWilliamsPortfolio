@@ -60,7 +60,12 @@ box-sizing: content-box;
 }
 
 body{
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  font-family: "UnifrakturCook", serif;
+  /* font-family: "Pirata One", serif;
+  font-family: "Creepster", cursive;
+  font-family: "Aguafina Script", serif;
+  font-family: "Noto Emoji", serif; */
   color: var(--verydarkgrey);
   background-color: var(--lightgrey);
   font-size:  var(--step-0);
