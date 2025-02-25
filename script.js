@@ -30,3 +30,28 @@ colorThemes.forEach((themeOption) => {
 });
 
 document.onload = retrieveTheme();
+
+// animate logo
+document.addEventListener('DOMContentLoaded', function() {
+    const returnToTop = document.getElementById('return-to-top');
+
+    returnToTop.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Add the rotate class to animate the rotation
+        returnToTop.classList.add('rotate');
+
+        // Scroll to the top of the page
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // Remove the rotate class after the scroll animation is complete
+        window.addEventListener('scroll', function() {
+            if (window.scrollY === 0) {
+                returnToTop.classList.remove('rotate');
+            }
+        });
+    });
+});
