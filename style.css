@@ -427,6 +427,12 @@ header{
   }
 }
 
+#return-to-top.rotate {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+  transform-origin: 50%;
+}
+
 header nav ul{
   display:flex;
   justify-content: start;
@@ -586,10 +592,10 @@ main div{
   border-radius: 1rem;
 }
 
-.dribbble div{
+/* .dribbble div{
   /*height: 12rem;*/
-  /*background-color: var(--grey);*/
-}
+  /*background-color: var(--grey);
+} */
 
 .clients{
   flex-wrap: wrap;
