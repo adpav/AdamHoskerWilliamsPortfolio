@@ -513,7 +513,7 @@ main{
 main div{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-grow: 1;
   grid-gap: 1rem;
 }
@@ -556,9 +556,10 @@ main div{
   width: auto;
   overflow-x: auto;
   overscroll-behavior-inline:contain ;
-  cursor:move;
+  /* cursor:move; */
   scroll-snap-type: inline mandatory;
   grid-auto-columns: 70%;
+  padding-bottom: 1rem;
 }
 
 
@@ -578,6 +579,20 @@ main div{
   .case-studies-margin-left {
   margin-left: var(--2xlarge);
   }
+}
+
+.case-studies::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.case-studies::-webkit-scrollbar-track {
+  background-color: var(--grey);
+  border-radius: 100vw;
+}
+
+.case-studies::-webkit-scrollbar-thumb {
+  background-color: var(--verydarkgrey);
+  border-radius: 100vw;
 }
 
 /*///////////////////////////////////*/
