@@ -390,6 +390,8 @@ header{
   grid-area: header;
   padding: 1rem 1rem;
   margin: 1rem;
+
+  animation: .5s ease-out 0s 1 slideInFromLeft;
 }
 
 @media screen and (min-width: 768px) {
@@ -415,6 +417,10 @@ header{
   width: auto;
 }
 
+main * {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 
 @media screen and (min-width: 768px) {
   .header_logo{
@@ -425,6 +431,18 @@ header{
     z-index: 0;
   }
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 #return-to-top.rotate {
   transform: rotate(360deg);
@@ -759,3 +777,4 @@ footer{
   --font-family: "Playfair Display", serif;
   --font-weight-bold: 400;
 }
+
