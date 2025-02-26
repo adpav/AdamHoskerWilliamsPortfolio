@@ -739,5 +739,5 @@ footer{
   --grey:hsl(218, 16%, 80%);
   --darkgrey:hsl(218, 79%, 30%);
   --verydarkgrey:  hsl(218, 93%, 32%);
-  --font-family: "UnifrakturCook", serif;
+  --font-family: "Playfair Display", serif;
 }
