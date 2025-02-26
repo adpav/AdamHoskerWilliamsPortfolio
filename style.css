@@ -104,6 +104,7 @@ h2{
 
 
 h3{
+  font-family: var(--font-family);
   font-size: var(--step-3);
   line-height: 1.1;
 }
