@@ -69,7 +69,7 @@ body{
 h1{
   font-family: var(--font-family);
   font-size: var(--step-5);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 0.9;
   letter-spacing: -0.04em;
   /*background: -webkit-linear-gradient(30deg,#2B86C5, #562B7C, #FF3CAC);
@@ -239,6 +239,7 @@ blockquote {
   --case-study-image:34rem;
 
   --font-family: 'Plus Jakarta Sans', sans-serif;
+  --font-weight-bold: 700;
 }
 
 .h4-style{font-size: var(--step-2);line-height: 1.2;}
@@ -734,10 +735,11 @@ footer{
 }
 
 :root:has(#classy:checked){
-  --lightgrey:hsl(218, 25%, 90%);
-  --quitelightgrey:hsl(218, 30%, 88%);
-  --grey:hsl(218, 16%, 80%);
-  --darkgrey:hsl(218, 79%, 30%);
-  --verydarkgrey:  hsl(218, 93%, 32%);
+  --lightgrey:hsl(212, 100%, 18%);
+  --quitelightgrey:hsl(212, 100%, 10%);
+  --grey:hsl(212, 100%, 30%);
+  --darkgrey: hsl(212, 100%, 80%);
+  --verydarkgrey:  hsl(212, 100%, 90%);
   --font-family: "Playfair Display", serif;
+  --font-weight-bold: 400;
 }
