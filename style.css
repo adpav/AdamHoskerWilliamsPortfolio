@@ -425,6 +425,10 @@ sidebar * {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
+footer * {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 
 @media screen and (min-width: 768px) {
   .header_logo{
