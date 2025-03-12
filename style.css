@@ -44,6 +44,12 @@ q:before, q:after {
   content: '';
   content: none;
 }*/
+
+/* figure {
+  border-left: 1px solid var(--grey);
+  padding-left: var(--medium);
+} */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -500,6 +506,7 @@ sidebar{
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -511,7 +518,7 @@ sidebar{
     justify-content: flex-start;
     align-items: center;
     padding-top: var(--3xlarge);
-    /*height: 100vh;*/
+    width: var(--sidebar-width);
   }
 }
 
