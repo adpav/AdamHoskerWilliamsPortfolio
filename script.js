@@ -55,3 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+window.onload = function() {
+    document.getElementById('return-to-top').classList.add('rotate');
+};
+
+document.querySelectorAll('[loading="lazy"]').forEach(element => {
+    const animateIn = () => {
+      element.style.opacity = 1;
+    };
+  
+    if (element.complete) {
+      animateIn();
+    } else {
+      element.addEventListener('load', animateIn);
+    }
+  });
