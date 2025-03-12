@@ -679,6 +679,7 @@ main div{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .contact div{
