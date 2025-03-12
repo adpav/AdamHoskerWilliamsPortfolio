@@ -461,6 +461,7 @@ footer * {
 header nav ul{
   display:flex;
   justify-content: start;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -472,7 +473,8 @@ header nav ul{
 header nav ul li{
   margin-right: var(--medium);
   z-index: 1000;
-/*   white-space: nowrap; */
+  margin-top: var(--xsmall);
+  /* white-space: nowrap; */
 }
 
 @media screen and (min-width: 768px) {
