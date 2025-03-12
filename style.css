@@ -790,7 +790,7 @@ footer{
 
 :root:has(#spooky:checked){
   --lightgrey:hsl(339,24%,11%);
-  --quitelightgrey:hsl(339,12%,30%);
+  --quitelightgrey:hsl(339,12%,20%);
   --grey:hsl(339,100%,30%);
   --darkgrey:hsl(339,100%,44%);
   --verydarkgrey:  hsl(339, 100%, 58%);
