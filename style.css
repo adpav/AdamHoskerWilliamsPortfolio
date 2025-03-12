@@ -421,6 +421,10 @@ main * {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
+sidebar * {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 
 @media screen and (min-width: 768px) {
   .header_logo{
@@ -464,7 +468,7 @@ header nav ul{
 header nav ul li{
   margin-right: var(--medium);
   z-index: 1000;
-/*   white-space: nowrap; */
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -505,15 +509,17 @@ sidebar{
   }
 }
 
-.sidebar_social-icons div{
-  width:3rem;
-  height:3rem;
-  background-color:white; 
-  border-radius: 50%;
-  margin-top:var(--small);
+.sidebar_social-icons fieldset {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-right: var(--medium);
+  padding-top: var(--small);
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar_social-icons fieldset {
+    padding-right: 0;
+    padding-top: 0;
+  }
 }
 
 main{
@@ -701,8 +707,17 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .colour-picker fieldset {
+    display: flex;
+    flex-direction: column;
+    /* padding-right: var(--medium); */
+    padding-top: var(--small);
+  }
 }
 
 .colour-picker input[type="radio"] {
@@ -717,10 +732,11 @@ footer{
   position: relative; 
 }
 
-.colour-picker input[type="radio"]:checked {
-  background-color: var(--radio-colour);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+/* .colour-picker input[type="radio"]:checked {
+  /* background-color: var(--radio-colour); */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  /* color: white;
+} */ 
 
 .colour-picker input[type="radio"]#light {
   --radio-colour: white;
@@ -778,3 +794,45 @@ footer{
   --font-weight-bold: 400;
 }
 
+@media (scripting: enabled) {
+  [loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container .icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.radio-container input[type="radio"]:checked + .icon {
+  color: var(--radio-colour);
+  background-color: var(--lightgrey);
+  border-radius: 50%;
+  border: 1px solid var(--darkgrey);
+}
+
+.icon-font {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.emoji{
+  font-family: "Noto Emoji", sans-serif;
+}
