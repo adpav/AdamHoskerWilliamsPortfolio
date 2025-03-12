@@ -722,7 +722,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-/*   width: 2.5rem; */
+  /* width: 2.5rem; */
 }
 
 @media screen and (min-width: 768px) {
@@ -849,6 +849,9 @@ footer{
 
 .emoji{
   font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .medium-text{
