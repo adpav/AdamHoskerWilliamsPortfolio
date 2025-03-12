@@ -781,7 +781,7 @@ footer{
 
 :root:has(#nerdy:checked){
   --lightgrey:hsl(151,24%,11%);
-  --quitelightgrey:hsl(151,12%,30%);
+  --quitelightgrey:hsl(151,12%,20%);
   --grey:hsl(151,100%,30%);
   --darkgrey:hsl(151,100%,44%);
   --verydarkgrey:  hsl(151, 100%, 58%);
