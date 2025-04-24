@@ -298,6 +298,7 @@ blockquote {
 .padding-left-medium{padding-left: var(--medium);}
 .padding-left-large{padding-left: var(--large);}
 .padding-left-xlarge{padding-left: var(--xlarge);}
+.padding-left-2xlarge{padding-left: var(--2xlarge);}
 
 .padding-right-xsmall{padding-right: var(--xsmall);}
 .padding-right-small{padding-right: var(--small);}
