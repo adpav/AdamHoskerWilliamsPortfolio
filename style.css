@@ -857,3 +857,8 @@ footer{
 .medium-text{
   font-size: var(--medium);
 }
+
+.paragraph{
+  display: flex;
+  flex-direction: column;
+}
