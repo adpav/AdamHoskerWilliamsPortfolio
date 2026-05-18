@@ -428,7 +428,7 @@ main * {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-sidebar * {
+aside * {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
@@ -500,7 +500,7 @@ nav{
   }
 }
 
-sidebar{
+aside{
   grid-area:sidebar;
   background-color:var(--grey);
   display: flex;
@@ -511,7 +511,7 @@ sidebar{
 }
 
 @media screen and (min-width: 768px) {
-  sidebar{
+  aside{
     grid-area:sidebar;
     background-color:var(--grey);
     display: flex;
