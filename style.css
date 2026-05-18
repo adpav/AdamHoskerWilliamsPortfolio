@@ -241,7 +241,7 @@ blockquote {
 
   --border-radius: var(--small);
 
-  --sidebar-width: 72px;
+  --aside-width: 72px;
 
   --case-study-image:34rem;
 
@@ -374,7 +374,7 @@ blockquote {
   display:grid;
   grid-template-columns: 1fr;
   grid-template-areas: 
-    "sidebar"
+    "aside"
     "header"
     "main"
     "footer";
@@ -383,11 +383,11 @@ blockquote {
 @media screen and (min-width: 768px) {
   .grid {
     display:grid;
-    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-columns: var(--aside-width) 1fr;
     grid-template-areas: 
-    "sidebar header"
-    "sidebar main"
-    "sidebar footer";
+    "aside header"
+    "aside main"
+    "aside footer";
   }
 }
 
@@ -404,7 +404,7 @@ header{
 @media screen and (min-width: 768px) {
   header{
     flex-direction: row;
-    width: 80%;
+    width: 85%;
     margin: 0 4rem 0 1rem;
     padding: var(--space-s) 1rem;
     align-items: center;
@@ -501,36 +501,37 @@ nav{
 }
 
 aside{
-  grid-area:sidebar;
+  grid-area:aside;
   background-color:var(--grey);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   width: 100vw;
+  padding-top: var(--medium);
 }
 
 @media screen and (min-width: 768px) {
   aside{
-    grid-area:sidebar;
+    grid-area:aside;
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-top: var(--3xlarge);
-    width: var(--sidebar-width);
+    width: var(--aside-width);
   }
 }
 
-.sidebar_social-icons fieldset {
+.aside_social-icons fieldset {
   display: flex;
   padding-right: var(--medium);
   padding-top: var(--small);
 }
 
 @media screen and (min-width: 768px) {
-  .sidebar_social-icons fieldset {
+  .aside_social-icons fieldset {
     padding-right: 0;
     padding-top: 0;
   }
@@ -545,7 +546,7 @@ main{
 
 @media screen and (min-width: 768px) {
   main{
-    width: calc(100vw - var(--sidebar-width));
+    width: calc(100vw - var(--aside-width));
   }
 }
 
