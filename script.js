@@ -14,6 +14,10 @@ const storeTheme = function(theme) {
     localStorage.setItem('theme', theme);
 };
 
+const applyTheme = function(themeId) {
+    document.documentElement.setAttribute('data-theme', themeId);
+};
+
 const retrieveTheme = function() {
     const activeTheme = localStorage.getItem('theme');
     colorThemes.forEach((themeOption) => {
@@ -21,15 +25,19 @@ const retrieveTheme = function() {
             themeOption.checked = true;
         }
     });
+    if (activeTheme) {
+        applyTheme(activeTheme);
+    }
 };
 
 colorThemes.forEach((themeOption) => {
     themeOption.addEventListener('click', () => {
         storeTheme(themeOption.id);
+        applyTheme(themeOption.id);
     });
 });
 
-document.onload = retrieveTheme();
+document.addEventListener('DOMContentLoaded', retrieveTheme);
 
 // animate logo
 document.addEventListener('DOMContentLoaded', function() {
