@@ -796,6 +796,10 @@ footer{
   --font-family: "Silkscreen", serif;
 }
 
+:root:has(#nerdy:checked) h1{
+  font-size: var(--step-4);
+}
+
 :root:has(#spooky:checked){
   --lightgrey:hsl(339,24%,11%);
   --quitelightgrey:hsl(339,12%,20%);
