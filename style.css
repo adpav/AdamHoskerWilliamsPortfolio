@@ -522,6 +522,11 @@ aside{
     padding-top: var(--3xlarge);
     width: var(--aside-width);
   }
+
+  .aside_social-icons {
+    position: sticky;
+    top: var(--3xlarge);
+  }
 }
 
 .aside_social-icons fieldset {

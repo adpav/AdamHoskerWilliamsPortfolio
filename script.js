@@ -39,6 +39,26 @@ colorThemes.forEach((themeOption) => {
 
 document.addEventListener('DOMContentLoaded', retrieveTheme);
 
+// GSAP text animation - loop through design, build, shape
+document.addEventListener('DOMContentLoaded', function() {
+    const headingSpan = document.querySelector('h1 .text-outline');
+    
+    if (headingSpan) {
+        gsap.registerPlugin(TextPlugin);
+
+        gsap.set(headingSpan, { text: 'design' });
+
+        // Explicit sequence avoids timing overlaps and guarantees all words render.
+        gsap.timeline({ repeat: -1 })
+            .to({}, { duration: 2 })
+            .to(headingSpan, { duration: 0.6, text: 'build' })
+            .to({}, { duration: 2 })
+            .to(headingSpan, { duration: 0.6, text: 'shape' })
+            .to({}, { duration: 2 })
+            .to(headingSpan, { duration: 0.6, text: 'design' });
+    }
+});
+
 // animate logo
 document.addEventListener('DOMContentLoaded', function() {
     const returnToTop = document.getElementById('return-to-top');
