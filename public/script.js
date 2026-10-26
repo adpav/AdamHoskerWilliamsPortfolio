@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const returnToTop = document.getElementById('return-to-top');
 
     returnToTop.addEventListener('click', function(event) {
+        if (returnToTop.getAttribute('href') !== '#') return;
         event.preventDefault();
 
         // Add the rotate class to animate the rotation

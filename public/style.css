@@ -470,6 +470,7 @@ header nav ul{
   display:flex;
   justify-content: start;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -483,6 +484,16 @@ header nav ul li{
   z-index: 1000;
   margin-top: var(--xsmall);
   /* white-space: nowrap; */
+}
+
+header nav a{
+  white-space: nowrap;
+}
+
+.nav-external-icon{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
 }
 
 @media screen and (min-width: 768px) {
@@ -570,6 +581,27 @@ main div{
   max-width: 50ch;
   margin-bottom: 0.2em;
   color: var(--darkgrey);
+}
+
+.overview-section-nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--small) var(--large);
+  align-self: flex-start;
+  margin-top: var(--medium);
+  padding-left: 0;
+}
+
+.overview-section-nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--small) var(--medium);
+  padding: 0;
+}
+
+.overview-section-nav li{
+  white-space: nowrap;
 }
 
 .banner{
@@ -722,6 +754,26 @@ footer{
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 1001;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--lightgrey);
+  background: var(--verydarkgrey);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.skip-link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
 }
 
 .colour-picker fieldset{

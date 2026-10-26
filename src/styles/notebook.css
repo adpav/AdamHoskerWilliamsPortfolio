@@ -1,0 +1,165 @@
+.notebook-main {
+  width: 100%;
+  max-width: 76rem;
+  min-width: 0;
+  /* padding: 0 0 0 var(--2xlarge); */
+}
+
+.notebook-main > * {
+  width: 100%;
+  max-width: 68rem;
+}
+
+.notebook-main > div,
+.notebook-prose {
+  display: block;
+}
+
+.notebook-main h1 {
+  font-size: var(--step-4);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.notebook-intro {
+  max-width: 58ch;
+  margin-bottom: 0 0 0 var(--2xlarge);
+  font-size: var(--step-1);
+}
+
+.notebook-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.notebook-card {
+  border-top: 1px solid var(--grey);
+  padding: 1.5rem 0;
+}
+
+.notebook-card h2 {
+  font-size: var(--step-2);
+  margin: 0.5rem 0;
+}
+
+.notebook-card p {
+  max-width: 64ch;
+  margin: 0.5rem 0;
+}
+
+.notebook-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+  font-size: var(--step--1);
+}
+
+.notebook-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.75rem;
+}
+
+.notebook-tags li {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: var(--step--1);
+}
+
+.notebook-article {
+  max-width: 70ch;
+}
+
+.notebook-article-header {
+  display: block;
+  width: auto;
+  margin: 0 0 2rem;
+  padding: 0;
+  animation: none;
+}
+
+.notebook-article-header h1 {
+  margin: 0.75rem 0 1rem;
+  overflow-wrap: anywhere;
+}
+
+.notebook-article-description {
+  max-width: 58ch;
+  font-size: var(--step-1);
+}
+
+.notebook-prose {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.notebook-prose > * + * {
+  margin-top: 1.25em;
+}
+
+.notebook-prose h2,
+.notebook-prose h3 {
+  margin-top: 2em;
+}
+
+.notebook-prose ul,
+.notebook-prose ol {
+  padding-left: 1.5em;
+}
+
+.notebook-prose blockquote {
+  border-left: 0.25rem solid var(--grey);
+  padding-left: 1.25rem;
+  font-size: var(--step-1);
+}
+
+.notebook-prose img,
+.notebook-prose picture,
+.notebook-prose video,
+.notebook-prose iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.notebook-prose pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: var(--grey);
+  border-radius: 0.25rem;
+}
+
+.notebook-prose :not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
+.notebook-prose figure {
+  margin: 2rem 0;
+}
+
+.notebook-prose figcaption {
+  margin-top: 0.5rem;
+  font-size: var(--step--1);
+}
+
+.notebook-back-link {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+  .notebook-main {
+    width: 100vw;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

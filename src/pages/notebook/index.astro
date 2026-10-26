@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import NotebookLayout from '../../layouts/NotebookLayout.astro';
+
+const entries = (await getCollection('notebook', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+const formatDate = (date: Date) => new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(date);
+const base = import.meta.env.BASE_URL;
+---
+
+<NotebookLayout
+  title="Notebook"
+  description="Things I'm thinking about, learning, making and paying attention to."
+>
+  <main class="content-padding work" id="main-content">
+    <div class="flex-column">
+      <h1>Notebook</h1>
+      <p class="notebook-intro">
+        Things I’m thinking about, learning, making and paying attention to.
+      </p>
+      {entries.length > 0 ? (
+        <ul class="notebook-list">
+          {entries.map((entry) => (
+            <li class="notebook-card">
+              <div class="notebook-meta">
+                <span>{entry.data.type}</span>
+                <time datetime={entry.data.published.toISOString()}>
+                  {formatDate(entry.data.published)}
+                </time>
+                {entry.data.featured && <span>Featured</span>}
+              </div>
+              <h2>
+                <a href={`${base}notebook/${entry.id}/`}>{entry.data.title}</a>
+              </h2>
+              <p>{entry.data.description}</p>
+              {entry.data.tags.length > 0 && (
+                <ul class="notebook-tags" aria-label="Tags">
+                  {entry.data.tags.map((tag) => <li>{tag}</li>)}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>There are no published Notebook entries yet.</p>
+      )}
+    </div>
+  </main>
+</NotebookLayout>
