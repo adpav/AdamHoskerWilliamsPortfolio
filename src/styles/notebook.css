@@ -1,52 +1,69 @@
-.notebook-main {
-  width: 100%;
-  max-width: 76rem;
-  min-width: 0;
-  /* padding: 0 0 0 var(--2xlarge); */
-}
-
-.notebook-main > * {
-  width: 100%;
-  max-width: 68rem;
-}
-
-.notebook-main > div,
 .notebook-prose {
   display: block;
-}
-
-.notebook-main h1 {
-  font-size: var(--step-4);
-  line-height: 1;
-  margin-bottom: 1rem;
 }
 
 .notebook-intro {
   max-width: 58ch;
   margin-bottom: 0 0 0 var(--2xlarge);
-  font-size: var(--step-1);
+  /* font-size: var(--step-1); */
 }
 
 .notebook-list {
-  display: grid;
-  gap: 1rem;
   list-style: none;
   padding: 0;
+  margin-top: var(--large);
 }
 
 .notebook-card {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  grid-template-areas: "type title tags";
+  align-items: center;
+  gap: 0.5rem 1.5rem;
   border-top: 1px solid var(--grey);
-  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--grey);
+  padding: var(--medium) 0;
 }
 
-.notebook-card h2 {
-  font-size: var(--step-2);
-  margin: 0.5rem 0;
+.notebook-card + .notebook-card {
+  margin-top: -1px;
 }
 
-.notebook-card p {
-  max-width: 64ch;
-  margin: 0.5rem 0;
+.notebook-card .notebook-type {
+  grid-area: type;
+}
+
+.notebook-card-title {
+  grid-area: title;
+  margin: 0;
+  font-size: var(--step-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.notebook-card .notebook-tags {
+  grid-area: tags;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .notebook-card {
+    grid-template-columns: 3rem;
+    column-gap: 1rem;
+    grid-template-areas:
+      "type title"
+      ".    tags";
+  }
+}
+
+.notebook-type {
+  margin: 0;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .notebook-meta {
@@ -64,6 +81,7 @@
   list-style: none;
   padding: 0;
   margin-top: 0.75rem;
+  padding-right: var(--large);
 }
 
 .notebook-tags li {
@@ -88,6 +106,7 @@
 .notebook-article-header h1 {
   margin: 0.75rem 0 1rem;
   overflow-wrap: anywhere;
+  font-weight: 400;
 }
 
 .notebook-article-description {
@@ -153,13 +172,15 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 767px) {
-  .notebook-main {
-    width: 100vw;
-  }
-}
-
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.notebook-heading {
+  font-weight: 400;
+}
+
+.notebook-heading--size{
+  font-size: var(--step-4);
 }

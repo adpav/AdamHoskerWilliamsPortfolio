@@ -373,7 +373,10 @@ blockquote {
 
 .grid{
   display:grid;
+  min-height: 100vh;
+  min-height: 100dvh;
   grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
   grid-template-areas: 
     "aside"
     "header"
@@ -385,6 +388,7 @@ blockquote {
   .grid {
     display:grid;
     grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "aside header"
     "aside main"

@@ -28,7 +28,7 @@ description: "A short introduction."
 published: 2026-10-26
 type: note
 tags:
-  - learning
+  - Web
 theme: default
 featured: false
 draft: false
@@ -37,7 +37,9 @@ draft: false
 Write the entry here.
 ```
 
-Supported types are `writing`, `note`, `collection` and `experiment`. Entries
+Use one `type`: `essay`, `note`, `collection`, `experiment` or `process`. Use up to
+two `tags` from the topic list in `src/notebook.ts` (e.g. `Design systems`, `AI`,
+`Code`, `Web`); the build fails on anything else. Entries
 marked `draft: true` are omitted from the index and build output. The optional
 `theme` value is metadata for future art direction; all entries currently use
 the accessible default article presentation.

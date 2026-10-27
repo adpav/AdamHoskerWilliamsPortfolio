@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import NotebookLayout from '../../layouts/NotebookLayout.astro';
+import { entryTypes } from '../../notebook';
 
 interface Props {
   entry: CollectionEntry<'notebook'>;
@@ -26,22 +27,20 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <NotebookLayout title={entry.data.title} description={entry.data.description}>
-  <main class="content-padding work" id="main-content">
+  <main class="content-padding margin-top-2xlarge" id="main-content">
     <article class="notebook-article" data-theme={entry.data.theme}>
       <header class="notebook-article-header">
+        <h1 class="notebook-heading">{entry.data.title}</h1>
         <div class="notebook-meta">
-          <span>{entry.data.type}</span>
-          <time datetime={entry.data.published.toISOString()}>
-            {formatDate(entry.data.published)}
-          </time>
-        </div>
-        <h1>{entry.data.title}</h1>
-        <p class="notebook-article-description">{entry.data.description}</p>
+          <span>{entryTypes[entry.data.type]}</span>
         {entry.data.tags.length > 0 && (
-          <ul class="notebook-tags" aria-label="Tags">
+          <ul class="notebook-tags" aria-label="Topics">
             {entry.data.tags.map((tag) => <li>{tag}</li>)}
           </ul>
         )}
+        </div>
+        <p class="notebook-article-description">{entry.data.description}</p>
+        
       </header>
       <div class="notebook-prose">
         <Content />

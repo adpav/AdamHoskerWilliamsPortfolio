@@ -4,8 +4,8 @@ description: "A first note on using this space to share things I'm learning and 
 published: 2026-10-26
 type: note
 tags:
-  - learning
-  - web
+  - Web
+  - Personal
 theme: default
 featured: true
 draft: false
