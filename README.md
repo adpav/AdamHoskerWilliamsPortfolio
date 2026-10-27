@@ -1,8 +1,10 @@
 # Adam Hosker-Williams portfolio
 
 The portfolio is built with Astro and deployed to GitHub Pages. The existing
-homepage remains a static Astro page, with its original CSS, JavaScript and
-assets served from `public/`.
+homepage remains a static Astro page. Shared CSS lives in `src/styles/site.css`
+and is imported by `SiteLayout.astro`, so Astro generates a content-hashed
+stylesheet URL to prevent stale styles after deployment. JavaScript and static
+assets are served from `public/`.
 
 The GitHub Pages repository setting must use **GitHub Actions** as its
 deployment source. The workflow builds and deploys from the `main` branch.

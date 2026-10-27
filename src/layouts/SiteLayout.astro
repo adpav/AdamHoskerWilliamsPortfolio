@@ -1,4 +1,6 @@
 ---
+import '../styles/site.css';
+
 interface Props {
   title: string;
   description: string;
@@ -37,7 +39,6 @@ const themes = [
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href={`${base}style.css`} rel="stylesheet" type="text/css" />
 
   <link rel="preload" href={fonts} as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href={fonts}></noscript>
