@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', retrieveTheme);
 
 // GSAP text animation - loop through design, build, shape
 document.addEventListener('DOMContentLoaded', function() {
-    const headingSpan = document.querySelector('h1 .text-outline');
+    const headingSpan = document.querySelector('.banner h1 .text-outline');
     
     if (headingSpan) {
         gsap.registerPlugin(TextPlugin);

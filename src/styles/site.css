@@ -491,13 +491,16 @@ header nav ul li{
 }
 
 header nav a{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
   white-space: nowrap;
 }
 
 .nav-external-icon{
   display: inline-block;
-  vertical-align: middle;
   font-size: 1em;
+  line-height: 1;
 }
 
 @media screen and (min-width: 768px) {
