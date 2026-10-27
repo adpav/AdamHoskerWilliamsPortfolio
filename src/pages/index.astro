@@ -1,114 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adam Hosker-Williams UI designer</title>
-  <meta name="description" content="Portfolio of Adam Hosker-Williams — UI designer, design systems thinker, and accessibility advocate with experience across health, education, sport, and ecommerce.">
-  <meta property="og:title" content="Adam Hosker-Williams — UI Designer">
-  <meta property="og:description" content="UI design, design systems, and creative work by Adam Hosker-Williams.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
 
-  <link href="style.css" rel="stylesheet" type="text/css" />
+<SiteLayout
+  title="Adam Hosker-Williams UI designer"
+  description="Portfolio of Adam Hosker-Williams — UI designer, design systems thinker, and accessibility advocate with experience across health, education, sport, and ecommerce."
+  ogTitle="Adam Hosker-Williams — UI Designer"
+  ogDescription="UI design, design systems, and creative work by Adam Hosker-Williams."
+  current="overview"
+>
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Creepster&family=Silkscreen:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Emoji&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Creepster&family=Silkscreen:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Emoji&display=swap"></noscript>
-
-  <link rel="icon" href="img/favicon.ico">
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward"></noscript>
-
-</head>
-
-<body>
-
-  <div class ="grid">  
-  
-  <header>
-    <div class="header_logo sticky">
-      <a href="#" id="return-to-top" class="rotate" aria-label="Return to top"><svg class="logo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M24.1,14.2l1.3-.8v7.2l-1.3-.8v-5.6ZM14.6,4.8l11.3,6.8-9.5,5.7,8.9,5.3v12.8l-11.3-6.8,9.5-5.7-8.9-5.3V4.8ZM24.1,23.9l-7.6,4.6,7.6,4.6h0v-9.2ZM15.9,16.2l7.6-4.6-7.6-4.6v9.2ZM15.9,20.3l-1.3-.8v7.2l1.3-.8v-5.6ZM40,20c0,11-9,20-20,20S0,31,0,20,9,0,20,0s20,9,20,20ZM38.5,20C38.5,9.8,30.2,1.5,20,1.5S1.5,9.8,1.5,20s8.3,18.5,18.5,18.5,18.5-8.3,18.5-18.5Z"/>
-      </svg></a>
-    </div>
-
-      <nav>
-        <ul role='list'>
-          <li><a href="#WebUI">UI Design</a></li>
-          <li><a href="#systems">Design Systems</a></li>
-          <li><a href="#creative">Creative</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-         
-        </ul>
-      </nav>
-      <!-- <form class="colour-picker" action="">
-
-          <label class="radio-container">
-            <input type="radio" name="theme" value="1" aria-label="Light Theme" title="Light" id="light" checked>
-            <span class="icon-font icon" aria-hidden="true">☀︎</span>
-          </label>
-          <label class="radio-container">
-              <input type="radio" name="theme" value="2" aria-label="Light Theme" title="Dark" id="dark">
-              <span class="icon-font icon" aria-hidden="true">🌙</span>
-          </label>
-          <label class="radio-container">
-              <input type="radio" name="theme" value="3" aria-label="Nerdy Theme" title="Nerdy" id="nerdy">
-              <span class="icon-font icon" aria-hidden="true">🤓</span>
-          </label>
-          <label class="radio-container">
-            <input type="radio" name="theme" value="4" aria-label="Spooky Theme" title="Spooky" id="spooky">
-            <span class="icon-font icon" aria-hidden="true">💀</span>
-        </label>
-        <label class="radio-container">
-          <input type="radio" name="theme" value="5" aria-label="Bluey Theme" title="Bluey" id="classy">
-          <span class="icon-font icon" aria-hidden="true">🖋︎</span>
-      </label>
-        
-
-        </fieldset>
-      </form> -->
-    
-    
-  </header>
-  
-  <aside class="padding-bottom-medium">
-    <div class="aside_social-icons">
-      
-      <form class="colour-picker" action="">
-        <fieldset>
-          <legend class="visually-hidden">Pick a colour scheme</legend>
-    
-              <label class="radio-container">
-                <input type="radio" name="theme" value="1" aria-label="Light Theme" title="Light" id="light" checked>
-                <span class="icon-font icon" aria-hidden="true">🌞</span>
-              </label>
-              <label class="radio-container">
-                  <input type="radio" name="theme" value="2" aria-label="Light Theme" title="Dark" id="dark">
-                  <span class="icon-font icon" aria-hidden="true">🌛</span>
-              </label>
-              <label class="radio-container">
-                  <input type="radio" name="theme" value="3" aria-label="Nerdy Theme" title="Nerdy" id="nerdy">
-                  <span class="icon-font icon" aria-hidden="true">🤖</span>
-              </label>
-              <label class="radio-container">
-                <input type="radio" name="theme" value="4" aria-label="Spooky Theme" title="Spooky" id="spooky">
-                <span class="icon-font icon" aria-hidden="true">💀</span>
-            </label>
-            <label class="radio-container">
-              <input type="radio" name="theme" value="5" aria-label="Bluey Theme" title="Bluey" id="classy">
-              <span class="icon-font icon" aria-hidden="true">🖋︎</span>
-          </label>
-
-        </fieldset>
-      </form>
-    </div>
-  </aside>
-  
-  <main>
+  <main id="main-content">
 
   <section class="work">
 
@@ -118,6 +20,16 @@
 
         <p class="subheading margin-top-large padding-right-large">Over the years I've worked across product design, design systems, branding and front-end-focused UI design. Today I focus on creating accessible, scalable products and the systems that support them—from interfaces and components through to design governance, standards and workflows. I currently maintain and evolve a healthcare design system used across multiple products and teams.</p>
 
+        <nav class="overview-section-nav" aria-label="On this page">
+          <span class="overview-section-nav-label">Jump to:</span>
+          <ul role="list">
+            <li><a href="#WebUI">UI Design</a></li>
+            <li><a href="#systems">Design Systems</a></li>
+            <li><a href="#creative">Creative</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
 
@@ -263,13 +175,9 @@ arrow_outward
 
 
   </main>
-  
-  <footer><p class="small-text margin-right-large content-padding"><span class="emoji medium-text">🧔</span>  This website is a showcase of my semantic HTML, CSS, and JavaScript skills, serving as a shop window to my <span><a href="https://crypto.hypermatic.com/prototype/m87u0qbi31593/0PMHJTyXLcpQtu8phKC" rel="noopener noreferrer">portfolio</a></span>.  Designed and built by yours truly. © Adam Hosker-Williams  <span id="current-year"></span></p></footer>
 
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+  <Fragment slot="scripts">
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  </Fragment>
+</SiteLayout>
