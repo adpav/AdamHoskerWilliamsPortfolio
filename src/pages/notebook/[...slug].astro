@@ -30,7 +30,6 @@ const base = import.meta.env.BASE_URL;
   <main class="content-padding margin-top-2xlarge" id="main-content">
     <article class="notebook-article" data-theme={entry.data.theme}>
       <header class="notebook-article-header">
-        <h1 class="notebook-heading">{entry.data.title}</h1>
         <div class="notebook-meta">
           <span>{entryTypes[entry.data.type]}</span>
         {entry.data.tags.length > 0 && (
@@ -39,11 +38,12 @@ const base = import.meta.env.BASE_URL;
           </ul>
         )}
         </div>
+        <h1 class="notebook-heading notebook-heading--size">{entry.data.title}</h1>
         <p class="notebook-article-description">{entry.data.description}</p>
-        
+        <hr>
       </header>
-      <div class="notebook-prose">
-        <Content />
+      <div class="notebook-prose drop-cap">
+        <Content/>
       </div>
       <a class="notebook-back-link" href={`${base}notebook/`}>← Back to Notebook</a>
     </article>
