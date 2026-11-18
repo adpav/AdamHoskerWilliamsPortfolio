@@ -74,6 +74,11 @@
   font-size: var(--step--1);
 }
 
+.notebook-meta span {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .notebook-tags {
   display: flex;
   flex-wrap: wrap;
@@ -81,6 +86,7 @@
   list-style: none;
   padding: 0;
   margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   padding-right: var(--large);
 }
 
@@ -104,7 +110,7 @@
 }
 
 .notebook-article-header h1 {
-  margin: 0.75rem 0 1rem;
+  margin: 0.75rem 0 var(--large);
   overflow-wrap: anywhere;
   font-weight: 400;
 }
@@ -112,6 +118,7 @@
 .notebook-article-description {
   max-width: 58ch;
   font-size: var(--step-1);
+  margin-bottom: var(--medium);
 }
 
 .notebook-prose {
@@ -125,7 +132,7 @@
 
 .notebook-prose h2,
 .notebook-prose h3 {
-  margin-top: 2em;
+  margin-top: var(--xlarge);
 }
 
 .notebook-prose ul,
@@ -183,4 +190,11 @@
 
 .notebook-heading--size{
   font-size: var(--step-4);
+}
+
+.drop-cap::first-letter {
+  -webkit-initial-letter: 3;
+          initial-letter: 3;
+  font-weight: 100;
+  margin-right: .75em;
 }
