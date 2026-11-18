@@ -57,7 +57,7 @@ It's the sort of content I find myself coming back to, particularly when the wor
 
 [Paul Boag's Balsamiq learning track: UI Design Psychology](https://balsamiq.com/learn/learning-tracks/ui-design-psychology/)
 
-## Understanding the web
+## CSS folks
 
 Andy Bell, Ahmed CSS, Kevin Powell and Rachel Andrew have all helped me get to grips with the more technical side of front-end development.
 
